@@ -1,5 +1,7 @@
 package Vetores;
 
+import java.util.Scanner;
+
 public class Exercicio_4 {
 	/*
 	 * Crie um método que receba como parâmetro um número decimal, converta esse
@@ -9,6 +11,25 @@ public class Exercicio_4 {
 	 */
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite um número: ");
+		int decimal = sc.nextInt();
+		// converte para binário
+		String binario = converterDecimal(decimal);
+		// converte para vetor
+		char[] vetor = binario.toCharArray();
+		for (char c : vetor) {
+			System.out.print(c + " ");
+		}
+	}
 
+	public static String converterDecimal(int decimal) {
+		if (decimal == 0) {
+			return "0";
+		}
+		if (decimal == 1) {
+			return "1";
+		}
+		return converterDecimal(decimal / 2) + (decimal % 2);
 	}
 }
