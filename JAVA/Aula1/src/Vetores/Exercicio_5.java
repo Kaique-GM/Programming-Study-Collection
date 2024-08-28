@@ -8,7 +8,22 @@ public class Exercicio_5 {
 	 */
 
 	public static void main(String[] args) {
+		int[] vetor1 = new int[] {1, 2, 3, 4, 5};
+		int[] vetor2 = new int[] { 100, 200, 300 , 400, 500};
+		makeMatriz(vetor1,vetor2);
+	}
+	
+	public static int[]makeMatriz(int vetor1[], int vetor2[]) {
+		int[] mat = new int[10];
+		for (int i = 0; i < 5; i++) {
+			mat[2 * i] = vetor1[i];
+            mat[2 * i + 1] = (vetor2[i]);
 
+		}
+		for(int i = 0; i < 10; i++) {
+			System.out.print(mat[i] + " ");
+		}
+		return mat;
 	}
 }
 

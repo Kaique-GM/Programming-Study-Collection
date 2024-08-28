@@ -21,6 +21,7 @@ public class Exercicio_4 {
 		for (char c : vetor) {
 			System.out.print(c + " ");
 		}
+		sc.close();
 	}
 
 	public static String converterDecimal(int decimal) {
