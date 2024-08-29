@@ -15,10 +15,10 @@ public class Exercicio_6 {
 
 		int[][] matriz = new int[3][3];
 		
-		imprimirMatriz(matriz);
+		stringMatriz(matriz);
 	}
 
-	public static void imprimirMatriz(int[][] matriz) {
+	public static void stringMatriz(int[][] matriz) {
 		System.out.println("Preencha a matriz de números inteiros: ");
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz.length; j++) {
@@ -26,6 +26,7 @@ public class Exercicio_6 {
 				matriz[i][j] = sc.nextInt();
 			}
 		}
+		// só funciona se o número de linhas for igual ao número de colunas.
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz.length; j++) {
 				System.out.print("|" + "\t" + matriz[i][j] + "\t"+ "|");
