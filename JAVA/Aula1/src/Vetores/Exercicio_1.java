@@ -11,7 +11,7 @@ public class Exercicio_1 {
 		inverteVetor(vetor);
 	}
 
-	public static int[] inverteVetor(int vetor[]) {
+	public static int[] inverteVetor(int[] vetor) {
 		int []aux = new int [8];
 		for(int i = 0; i< 8;i++) {
 			aux[i] = vetor[7-i];

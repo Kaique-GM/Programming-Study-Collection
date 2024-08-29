@@ -23,7 +23,7 @@ public class Exercicio_4 {
 		}
 		sc.close();
 	}
-
+	// Método recursivo
 	public static String converterDecimal(int decimal) {
 		if (decimal == 0) {
 			return "0";
