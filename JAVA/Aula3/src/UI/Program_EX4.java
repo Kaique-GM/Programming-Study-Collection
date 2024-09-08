@@ -13,10 +13,6 @@ public class Program_EX4 {
 			System.out.println(Arrays.toString(p.ordenaPilhas()));
 			
 			
-			
-			
-			
-			
 		}
 		
 	}
