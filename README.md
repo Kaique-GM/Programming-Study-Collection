@@ -11,5 +11,6 @@ Este repositório serve como um repositório central para armazenar e organizar 
 Atualmente, o repositório contém projetos nas seguintes linguagens de programação:
 
 - **HTML**: Exercícios em HTML (estruturação de páginas web).
+- **CSS**: Arquivos básicos utilizados para auxiliar nas aulas de HTML.
 - **Java**: Exercícios desenvolvidos em Java.
 
