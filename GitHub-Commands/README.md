@@ -18,9 +18,9 @@
 
 ```bash
 git config --global user.name "Seu Nome"
-Definir email do usuário
 ```
 
+### Definir email do usuário
 ```bash
 git config --global user.email "seu-email@example.com"
 ```
