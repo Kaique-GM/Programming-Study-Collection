@@ -1,1 +1,1 @@
-SELECT * FROM aulas_jdbc.department;
+SELECT * FROM aulas_jdbc.seller;
