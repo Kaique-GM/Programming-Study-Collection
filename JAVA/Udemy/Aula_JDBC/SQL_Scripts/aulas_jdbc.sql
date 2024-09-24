@@ -1,1 +1,0 @@
-SELECT * FROM aulas_jdbc.seller;
