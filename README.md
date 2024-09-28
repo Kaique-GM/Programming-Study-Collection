@@ -21,7 +21,7 @@ Atualmente, o repositório contém projetos nas seguintes linguagens de programa
 
 ## 🎓 Agradecimentos
 
-Este repositório foi criado para armazenar e acompanhar minha jornada de aprendizado nas disciplinas do curso de Análise e Desenvolvimento de Sistemas. Através das aulas e exercícios práticos, tenho a oportunidade de consolidar conhecimentos em diversas áreas da programação e desenvolvimento de sistemas.
+Este repositório foi criado para armazenar e acompanhar minha jornada de aprendizado nas disciplinas do curso de Análise e Desenvolvimento de Sistemas na FACENS. Através das aulas e exercícios práticos, tenho a oportunidade de consolidar conhecimentos em diversas áreas da programação e desenvolvimento de sistemas.
 
 [![Facens](https://img.shields.io/badge/Facens-%230077FF?style=for-the-badge&logoColor=white)](https://www.facens.br)  
 **Saiba mais sobre a Facens!**
