@@ -15,7 +15,7 @@ Atualmente, o repositório contém projetos nas seguintes linguagens de programa
 
 ![HTML](https://img.shields.io/badge/HTML-%23E44D26?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS](https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=css3&logoColor=white) 
-![Java](https://img.shields.io/badge/Java-%23F7DF1E?style=for-the-badge&logo=java&logoColor=white) 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) 
 
 <div align="center">
 
