@@ -1,11 +1,8 @@
-<div align="center">
 
 # Repositório de Aulas de Programação
 
-</div>
 Bem-vindo ao repositório de aulas de programação! Aqui você encontrará uma coleção de projetos e exercícios em várias linguagens de programação que estou estudando e desenvolvendo.
 
-<div align="center">
 
 ## 📝 Descrição
 
@@ -19,7 +16,7 @@ Este repositório serve como um repositório central para armazenar e organizar 
 ![HTML](https://img.shields.io/badge/HTML-%23E44D26?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS](https://img.shields.io/badge/CSS-%231572B6?style=for-the-badge&logo=css3&logoColor=white) 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) 
-</a>
+
 <div align="center">
 
 ## 🎓 Agradecimentos
