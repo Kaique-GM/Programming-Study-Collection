@@ -13,5 +13,7 @@ public class Program_EX5 {
 		String linha = sc.nextLine();
 		Balanceamento b = new Balanceamento(linha);
 		System.out.println(b.validaBalanceamento(linha));
+
+		sc.close();
 	}
 }

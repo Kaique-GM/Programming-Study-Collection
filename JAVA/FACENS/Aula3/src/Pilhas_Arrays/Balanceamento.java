@@ -12,7 +12,7 @@ public class Balanceamento {
 	}
 
 
-	public static boolean validaBalanceamento(String linha) {
+	public boolean validaBalanceamento(String linha) {
 		List<Character> simbolos = new ArrayList<>();
 		char simbolo1 = '{';
 		char simbolo2 = '[';
@@ -46,6 +46,11 @@ public class Balanceamento {
 		}
 			System.out.print(simbolos);
 	return true;
+	}
+
+
+	public String getLinha() {
+		return linha;
 	}
 }
 
