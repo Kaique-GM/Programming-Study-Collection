@@ -68,7 +68,7 @@ public class ArvoreBinaria {
         
         if(no != null){
             System.out.println("Profundidade: " + profundidade + ", info: " + no.getInfo());
-
+            
             printArvoreRecursivo(no.getNoEsquerda(), profundidade + 1);
 
             printArvoreRecursivo(no.getNoDireita(), profundidade + 1);

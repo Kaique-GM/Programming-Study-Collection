@@ -1,4 +1,4 @@
-public class Node {
+public class Node{
     
     private Object info;//Armazena as informações que serão atribuidas a lista
     private Node proximoNo;//Aponta para o próximo Nó

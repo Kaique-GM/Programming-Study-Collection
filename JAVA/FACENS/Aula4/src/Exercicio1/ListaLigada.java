@@ -59,6 +59,8 @@ public class ListaLigada {
     public void remover(int indice) {
         if (indice == 0) {
             inicio = inicio.getProximoNo();
+  
+
         } else {
 
             Node anterior = percorreLista(indice - 1);
@@ -69,6 +71,7 @@ public class ListaLigada {
 
             if (nodoRemover == fim) {
                 fim = anterior;
+               
             }
         }
 
@@ -92,6 +95,7 @@ public class ListaLigada {
         } else
             return null;
     }
+    
 
     public int getTamanho() {
         // Retorna o tamanho da lista

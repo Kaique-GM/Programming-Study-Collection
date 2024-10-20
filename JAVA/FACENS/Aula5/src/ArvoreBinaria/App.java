@@ -14,10 +14,11 @@ minhaArvoreBinaria.adicionar(56);
 minhaArvoreBinaria.adicionar(45);
 minhaArvoreBinaria.adicionar(344);
 
+    //int profundidade = minhaArvoreBinaria.buscarProfundidade(344);
+////System.out.println(profundidade);
 
 
-
-        minhaArvoreBinaria.printArvore();
+       minhaArvoreBinaria.printArvore();
 
     }
 }
