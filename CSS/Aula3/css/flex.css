@@ -1,0 +1,28 @@
+.box {
+    width: 100%;
+    display: flex;
+    /* Eixo principal se moverá ao longo da linha > da direita para esquerda em Row-Reverse */
+    flex-direction: row;
+
+    /* Quebra automatica de linha */
+    flex-wrap: wrap;
+
+    /* Alinhamento na Horizontal */
+    justify-content: center;
+
+
+    /* Alinha na Vertical */
+    align-items: center;
+
+
+
+}
+
+.box .car {
+    border: 1px solid #000;
+    width: 170px;
+}
+
+.box .car img {
+    width: 95%;
+}

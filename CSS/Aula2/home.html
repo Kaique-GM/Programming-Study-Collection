@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lojinha de Perfumes </title>
     <link rel="stylesheet" href="./css/style_home.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 </head>
+
 <body>
     <!-- Inicio Menu -->
     <header id="header">
         <a id="logo" href="./home.html"><img src="./img/logoperfume.jpg" alt="Logo da Lojinha de Perfumes"></a>
         <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger"></span>
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
             </button>
             <!-- Em Button estamos tratando a função do menu hamburger -->
             <!-- Inicio opções menu -->
@@ -28,5 +32,51 @@
         </nav>
     </header>
     <!-- Fim Menu -->
+    <!-- Inicio Caroussel Pagina Home -->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-pause="true">
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="../../HTML/img/carros/impala_67.jpg" class="d-block w-100" alt="...">
+
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+                <img src="../../HTML/img/Jogos/godofwar.jpeg" class="d-block w-100" alt="...">
+
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+                <img src="../../HTML/img/carros/kwid.png" class="d-block w-100" alt="...">
+
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+                <img src="../../HTML/img/Jogos/minecraft.jpg" class="d-block w-100" alt="...">
+
+            </div>
+
+
+        </div>
+
+        <!-- Inicio controle carousel -->
+        <button class="carousel-control-prev" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Proximo</span>
+        </button>
+
+
+
+        <!-- fim controle carousel -->
+
+    </div>
+
+
+    <!-- Fim Caroussel Pagina Home -->
 </body>
+
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+
 </html>
