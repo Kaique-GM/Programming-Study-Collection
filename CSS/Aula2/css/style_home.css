@@ -1,67 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
-
-/* CSS Lojinha de Perfumes */
-/* Inicio estilo header */
-body,ul {
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
     margin: 0;
     padding: 0;
-
+    background-color: #f4f4f4;
 }
 
-#menu a {
-    color: black;
+a {
     text-decoration: none;
-    font-family: "Abel", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    transition: 0.3s;
-    text-align: center;
-    padding: 0 0.4em;
-    font-size: 24px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom: 2px solid #05e6e6;
-    box-shadow: 1px 1px 2px #969696;
+    color: inherit;
 }
-#menu a:hover {
-    font-size: 22px;
-    border-bottom-left-radius: 15px; /* Arredondar canto abaixo e esquerdo */
-    border-bottom-right-radius: 15px; /* Arredondar canto abaixo e direito */
-    border-bottom: 0.1px solid #000000;
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
+#head {
+    background-color: #000;
+    padding: 10px 0;
 }
 
 #logo img {
-
-    height: 40px;
+    width: 150px;
 }
 
-#log img:hover {
-    box-shadow: 2px 2px 4px #cbcbcb;
-    transition: 0.3s;
-
+#nav .navbar-nav .nav-link {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #fff;
 }
 
-#header {
-    box-sizing: border-box;
-    height: 60px;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #e7e7e7;
-    box-shadow: 3px 3px 6px #b1b1b1;/*Sombra do Menu*/
+#nav .navbar-nav .nav-link:hover {
+    color: #f39c12;
 }
 
-
-#menu {
-    display: flex;
-    list-style: none;
-    gap: 0.8rem ; /*rem é a unidade de medida que varia de acordo com a dimensão do navegador ou dispositivo,por partão, 1rem é igual a 16px*/ /*Define o espaçamento entre as linhas e colunas de um flexbox*/
+/* Carrossel */
+.carousel-inner img {
+    height: 850px;
+    object-fit: cover;
 }
 
-#btn-mobile {
-    display: none;
-
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #f39c12;
 }
 
+/* Seção Banner */
+.section-banner-fuid {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.text-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.text-banner .btn {
+    background-color: #f39c12;
+    border: none;
+}
+
+.text-banner .btn:hover {
+    background-color: #e67e22;
+}
+
+/* Seção Destaque */
+.destaque {
+    background-color: #fff;
+    padding: 50px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destaque h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.destaque p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.destaque .col-md-2 {
+    margin-bottom: 30px;
+}
+
+.destaque figure {
+    text-align: center;
+}
+
+.destaque figure img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.destaque figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#saiba-mais {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#saiba-mais:hover {
+    background-color: #e67e22;
+}
+
+/* Seção Novidades */
+.novidades {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.novidades h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.novidades p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #logo img {
+        width: 120px;
+    }
+
+    .carousel-inner img {
+        height: 350px;
+    }
+
+    .section-banner-fuid {
+        padding: 20px 0;
+    }
+
+    .text-banner h1 {
+        font-size: 2rem;
+    }
+
+    .destaque .col-md-2 {
+        margin-bottom: 20px;
+    }
+
+    .destaque figure img {
+        width: 120px;
+        height: 120px;
+    }
+}

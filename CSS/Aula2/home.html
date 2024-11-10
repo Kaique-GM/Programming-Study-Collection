@@ -3,80 +3,160 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojinha de Perfumes </title>
-    <link rel="stylesheet" href="./css/style_home.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>Pãodaria do Carlin</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style_home.css">
 </head>
 
 <body>
-    <!-- Inicio Menu -->
-    <header id="header">
-        <a id="logo" href="./home.html"><img src="./img/logoperfume.jpg" alt="Logo da Lojinha de Perfumes"></a>
-        <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
-                aria-expanded="false">
-                <span id="hamburger"></span>
+
+    <!-- Navbar -->
+    <header id="head" class="navbar navbar-expand-lg navbar-dark">
+        <a id="logo" class="navbar-brand" href="./home.html">
+            <img src="./img/logoperfume.jpg" alt="Logo">
+        </a>
+        <nav id="nav" class="navbar-nav">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Em Button estamos tratando a função do menu hamburger -->
-            <!-- Inicio opções menu -->
-            <ul id="menu" role="menu">
-                <li><a class="linkMenu" href="./home.html"> Home</a></li>
-                <li><a class="linkMenu" href="#"> Quem Somos</a></li>
-                <li><a class="linkMenu" href="#"> Produto</a></li>
-                <li><a class="linkMenu" href="#"> Contato</a></li>
-                <li><a class="linkMenu" href="#"> #Blog</a></li>
-            </ul>
-            <!-- Fim opções de Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li><a class="nav-link linkMenu" href="./home.html">Home</a></li>
+                    <li><a class="nav-link linkMenu" href="#">Quem Somos</a></li>
+                    <li><a class="nav-link linkMenu" href="#">Produto</a></li>
+                    <li><a class="nav-link linkMenu" href="#">Contato</a></li>
+                    <li><a class="nav-link linkMenu" href="#">Blog</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <!-- Fim Menu -->
-    <!-- Inicio Caroussel Pagina Home -->
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-pause="true">
-        <div class="carousel-inner" role="listbox">
 
-            <div class="carousel-item active" data-bs-interval="3000">
-                <img src="../../HTML/img/carros/impala_67.jpg" class="d-block w-100" alt="...">
-
+    <!-- Carrossel -->
+    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../HTML/img/carros/Supra.jpg" class="d-block w-100" alt="Imagem 1">
             </div>
-            <div class="carousel-item" data-bs-interval="1500">
-                <img src="../../HTML/img/Jogos/godofwar.jpeg" class="d-block w-100" alt="...">
-
+            <div class="carousel-item">
+                <img src="../../HTML/img/carros/lancer.jpeg" class="d-block w-100" alt="Imagem 2">
             </div>
-            <div class="carousel-item" data-bs-interval="1500">
-                <img src="../../HTML/img/carros/kwid.png" class="d-block w-100" alt="...">
-
+            <div class="carousel-item">
+                <img src="../../HTML/img/Jogos/Grand_Theft_Auto_San_Andreas_capa.png" class="d-block w-100"
+                    alt="Imagem 3">
             </div>
-            <div class="carousel-item" data-bs-interval="1500">
-                <img src="../../HTML/img/Jogos/minecraft.jpg" class="d-block w-100" alt="...">
-
-            </div>
-
-
         </div>
-
-        <!-- Inicio controle carousel -->
-        <button class="carousel-control-prev" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-
-        <button class="carousel-control-next" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Proximo</span>
-        </button>
-
-
-
-        <!-- fim controle carousel -->
-
+            <span class="sr-only">Próximo</span>
+        </a>
     </div>
 
+    <!-- Seção Banner -->
+    <div class="section-banner-fuid">
+        <div class="container-fluid">
+            <div class="row m-0">
+                <div class="col-12 col-md-6">
+                    <figure>
+                        <img src="../../HTML/img/carros/Mcqueen.webp" alt="banner" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6">
+                    <section class="text-banner">
+                        <h1>Conheça o mais novo lançamento</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vitae fuga debitis accusamus
+                            sit, in modi a culpa nihil dolorum porro omnis voluptate, animi temporibus voluptates cumque
+                            quaerat beatae ab.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Fim Caroussel Pagina Home -->
+    <!-- Seção Destaque -->
+    <div class="destaque">
+        <div class="container">
+            <section class="col-12">
+                <h2>Coleções</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, eveniet ullam! Provident
+                    dignissimos, beatae fugiat doloribus consequuntur ipsa minus ratione rerum exercitationem! Sit
+                    repellat corporis voluptatem dicta quae repudiandae ab.</p>
+            </section>
+            <div class="row">
+                <div class="col-6 col-md-2">
+                    <figure>
+                        <img src="../../HTML/img/logos/github-logo.webp"
+                            alt="Github" class="img-fluid">
+                        <figcaption>Compre seu proprio GitHub por apenas R$78585</figcaption>
+                    </figure>
+                </div>
+                <div class="col-6 col-md-2">
+                    <figure>
+                        <img src="../../HTML/img/mouse1.jpg"
+                            alt="Github" class="img-fluid">
+                        <figcaption>Mouse Gamer R$40998</figcaption>
+                    </figure>
+                </div>
+                <div class="col-6 col-md-2">
+                    <figure>
+                        <img src="../../HTML/img/Jogos/frefa.jpg"
+                            alt="Github" class="img-fluid">
+                        <figcaption>Passe do Frefas R$785</figcaption>
+                    </figure>
+                </div>
+                <div class="col-6 col-md-2">
+                    <figure>
+                        <img src="../../HTML/img/Jogos/LOL.webp"
+                            alt="Github" class="img-fluid">
+                        <figcaption>Não clique aqui</figcaption>
+                    </figure>
+                </div>
+                <div class="col-6 col-md-2">
+                    <figure>
+                        <img src="../../HTML/img/carros/Zentorno.webp"
+                            alt="Github" class="img-fluid">
+                        <figcaption>Zentorno Bala R$100000</figcaption>
+                    </figure>
+                </div>
+                <div class="col-6 col-md-2">
+                    <figure>
+                        <img src="../../HTML/img/Jogos/midnight.jpeg"
+                            alt="Github" class="img-fluid">
+                        <figcaption>minaiteclubi R$2231231 </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <a id="saiba-mais" href="#" class="btn btn-primary mt-4">Saiba Mais!</a>
+        </div>
+    </div>
+
+    <!-- Seção Novidades -->
+    <div class="novidades">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <section class="text-body">
+                        <h2>Novidades</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, nobis, cupiditate ex
+                            dolorem in blanditiis doloribus.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
-<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 
 </html>
