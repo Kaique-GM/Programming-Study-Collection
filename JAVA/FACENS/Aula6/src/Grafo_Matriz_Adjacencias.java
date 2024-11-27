@@ -5,13 +5,16 @@ public class Grafo_Matriz_Adjacencias {
     int[][] matrizAdjacencias;
     String[] vertices;
     int indiceVertices;
-    boolean[] visitado;
+    boolean[] visitado; // Para marcar os vértices visitados
+    String caminho = "";
+    int[] predecessor;
 
     // Instancia a matriz conforme a quantidade de vertices.
     public Grafo_Matriz_Adjacencias(int qtdVertices) {
         this.matrizAdjacencias = new int[qtdVertices][qtdVertices];
         this.vertices = new String[qtdVertices];
         this.visitado = new boolean[qtdVertices];
+        this.predecessor = new int[qtdVertices];
         indiceVertices = 0;
     }
 
@@ -69,80 +72,137 @@ public class Grafo_Matriz_Adjacencias {
 
     // Método para implementar a busca em profundidade
     public String buscaProfundidade(int iVerticeInicial, int iVerticeFinal) {
-        // Reseta os vértices visitados
         for (int i = 0; i < visitado.length; i++) {
             visitado[i] = false;
         }
 
-        String caminho = "Inicio: " + iVerticeInicial;
-
+        if (iVerticeInicial == iVerticeFinal) {
+            return caminho = "O vértice inicial é igual ao vértice Final";
+        }
         // Inicia a busca em profundidade
-        return buscaProfundidadeAux(iVerticeInicial, iVerticeFinal, caminho);
+        caminho = "Inicio: ";
+        buscaProfundidadeRecursivo(iVerticeInicial, iVerticeFinal);
+        return caminho;
     }
 
-    // Função recursiva de busca em profundidade
-    private String buscaProfundidadeAux(int verticeAtual, int iVerticeFinal, String caminho) {
-        // Marca o vértice como visitado
-        visitado[verticeAtual] = true;
+    public void buscaProfundidadeRecursivo(int iVertice, int iVerticeFinal) {
 
-        // Se o vértice atual é o final, retorna o caminho
-        if (verticeAtual == iVerticeFinal) {
-            return caminho + " ==> " + verticeAtual + " ==FIM==";
+        // Se o vértice já foi visitado
+        if (visitado[iVertice]) {
+            return;
         }
 
-        // Explora os vértices adjacentes
+        // Marca o vértice atual como visitado
+        visitado[iVertice] = true;
+
+        // Verifica se o vértice atual é o vértice final
+        if (iVertice == iVerticeFinal) {
+            caminho += iVertice + " ==FIM=="; // Caminho encontrado
+            return;
+        }
+
+        // Adiciona o vértice ao caminho
+        caminho += iVertice + " ==> ";
+
+        // Explora os vizinhos do vértice atual
         for (int i = 0; i < vertices.length; i++) {
-            if (matrizAdjacencias[verticeAtual][i] != 0 && !visitado[i]) {
-                // Chama a função recursiva para o próximo vértice adjacente
-                String resultado = buscaProfundidadeAux(i, iVerticeFinal, caminho + " ==> " + verticeAtual);
-                if (!resultado.isEmpty()) {
-                    return resultado; // Retorna o caminho se encontrado
+            // Se existe uma aresta e o vértice não foi visitado, explora
+            if (matrizAdjacencias[iVertice][i] != 0 && !visitado[i]) {
+                buscaProfundidadeRecursivo(i, iVerticeFinal);
+                // Se o caminho já foi encontrado, termina a busca
+                if (caminho.contains("==FIM==")) {
+                    return;
                 }
             }
         }
-        // Caso o caminho não seja encontrado
-        return "";
     }
 
     public String buscaLargura(int iVerticeInicial, int iVerticeFinal) {
+        // Reseta os arrays de visitados e predecessores
+        for (int i = 0; i < visitado.length; i++) {
+            visitado[i] = false;
+            predecessor[i] = -1; // -1 significa que o vértice não tem predecessor
+        }
+
+        // Cria uma fila para a busca
         Queue<Integer> fila = new LinkedList<>();
         fila.add(iVerticeInicial);
         visitado[iVerticeInicial] = true;
 
-        int[] caminho = new int[vertices.length]; // Para reconstruir o caminho
-        for (int i = 0; i < vertices.length; i++) {
-            caminho[i] = -1; // -1 significa que não foi visitado
-        }
-
         while (!fila.isEmpty()) {
             int verticeAtual = fila.poll();
 
-            // Se encontramos o vértice final
+            // Se encontrou o vértice final
             if (verticeAtual == iVerticeFinal) {
-                StringBuilder caminhoPercorrido = new StringBuilder("Inicio: " + iVerticeInicial);
-                while (verticeAtual != iVerticeInicial) {
-                    caminhoPercorrido.insert(0, " ==> " + verticeAtual);
-                    verticeAtual = caminho[verticeAtual];
-                }
-                caminhoPercorrido.insert(0, " ==> ");
-                return caminhoPercorrido + " ==> " + iVerticeFinal + " ==FIM==";
+                return reconstruaCaminho(iVerticeInicial, iVerticeFinal);
             }
 
-            // Explora os vizinhos
+            // Explore todos os vizinhos do vértice atual
             for (int i = 0; i < vertices.length; i++) {
                 if (matrizAdjacencias[verticeAtual][i] != 0 && !visitado[i]) {
                     fila.add(i);
                     visitado[i] = true;
-                    caminho[i] = verticeAtual; // Armazena de onde veio
+                    predecessor[i] = verticeAtual; // Armazena o predecessor
                 }
             }
         }
+        return "Caminho não encontrado."; // Caso não encontre o caminho
+    }
 
-        return "Caminho não encontrado.";
+    private String reconstruaCaminho(int iVerticeInicial, int iVerticeFinal) {
+        int vertice = iVerticeFinal;
+        StringBuilder caminhoReverso = new StringBuilder();
+
+        // Reconstrói o caminho a partir do vértice final
+        while (vertice != iVerticeInicial) {
+            caminhoReverso.insert(0, " => " + vertice);
+            vertice = predecessor[vertice];
+        }
+
+        caminhoReverso.insert(0, iVerticeInicial);
+        caminho = "Caminho: " + caminhoReverso.toString();
+        return caminho;
     }
 
     public String buscaGulosa(int iVerticeInicial, int iVerticeFinal) {
-        return "";
+        // Reseta os arrays de visitados e o caminho
+        for (int i = 0; i < visitado.length; i++) {
+            visitado[i] = false;
+        }
+        caminho = "Inicio: ";
+
+        // Define o vértice atual como o vértice inicial
+        int verticeAtual = iVerticeInicial;
+        visitado[verticeAtual] = true;
+
+        while (verticeAtual != iVerticeFinal) {
+            caminho += verticeAtual + " => ";
+            int menorPeso = Integer.MAX_VALUE;
+            int proximoVertice = -1;
+
+            // Encontra o vizinho não visitado com a aresta de menor peso
+            for (int i = 0; i < vertices.length; i++) {
+                if (matrizAdjacencias[verticeAtual][i] != 0 && !visitado[i]) {
+                    if (matrizAdjacencias[verticeAtual][i] < menorPeso) {
+                        menorPeso = matrizAdjacencias[verticeAtual][i];
+                        proximoVertice = i;
+                    }
+                }
+            }
+
+            // Verifica se encontrou um próximo vértice
+            if (proximoVertice == -1) {
+                return caminho + "Caminho não encontrado. Nenhum próximo vértice acessível.";
+            }
+
+            // Atualiza o vértice atual e marca como visitado
+            verticeAtual = proximoVertice;
+            visitado[verticeAtual] = true;
+        }
+
+        // Adiciona o vértice final ao caminho
+        caminho += iVerticeFinal + " ==FIM==";
+        return caminho;
     }
 
     public static void main(String[] args) {
@@ -152,7 +212,19 @@ public class Grafo_Matriz_Adjacencias {
         meuGrafo.addArestaBidirecionais(0, 1, 2);
         meuGrafo.addArestaUnidirecionais(2, 3, 8);
         meuGrafo.addArestaUnidirecionais(3, 1, 7);
-        System.out.println(meuGrafo.buscaProfundidade(3, 2));
+
+        meuGrafo.addArestaBidirecionais(1, 2, 3);
+
+        System.out.println("Relacoes de Vértices:");
+        System.out.println(meuGrafo.relacoesVertices(0));
+
+        System.out.println("\nBusca em Profundidade:");
+        System.out.println(meuGrafo.buscaProfundidade(0, 3));
+
+        System.out.println("\nBusca em Largura:");
         System.out.println(meuGrafo.buscaLargura(0, 3));
+
+        System.out.println("\nBusca Gulosa:");
+        System.out.println(meuGrafo.buscaGulosa(0, 3));
     }
 }
